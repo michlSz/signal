@@ -14,7 +14,7 @@ session_start();
     <meta name="author" content="Theme Region">
    	<meta name="description" content="">
 
-    <title>Trade | Portal sygnałowy rynku kryptowalut</title>
+    <title>Signal | Portal sygnałowy rynku kryptowalut</title>
 
    <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" >
