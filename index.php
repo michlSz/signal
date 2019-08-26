@@ -13,9 +13,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Theme Region">
    	<meta name="description" content="">
-
     <title>Signal | Portal sygnałowy rynku kryptowalut</title>
-
    <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" >
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -263,7 +261,7 @@ session_start();
 								<img src="images/icon/14.png" alt="Icon" class="img-fluid">
 							</div><!-- cta-icon -->
 
-							<h4>Sprawdź sygnał</h4>
+							<h4>Sprawdź sygnał!</h4>
 							<p>Gotowe targety stworzone prze grupę doświadczonych analityków</p>
 						</div>
 					</div><!-- single-cta -->
