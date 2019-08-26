@@ -127,7 +127,7 @@ echo'<br />';
 			
 				<!-- banner-form -->
 				<div class="banner-form banner-form-full">
-					<form method="GET"  action="#">
+					<form method="GET"  action="">
 						<!-- category-change -->
 						<input name="szukaj" type="text" class="form-control" placeholder="Wpisz skrót kryptowaluty">
 						<button type="submit" class="form-control" value="Search">Szukaj</button>
@@ -209,7 +209,7 @@ echo'<br />';
 
 										$_GET['szukaj']=trim($_GET['szukaj']);
 
-										$query_list = "SELECT * FROM signals WHERE signal_pair LIKE '%{$_GET['szukaj']}%'";
+										$query_list = "SELECT * FROM signals WHERE signal_pair_1 LIKE '%{$_GET['szukaj']}%'";
 
 }
 elseif (isset($_GET['najnowsze'])){
@@ -372,10 +372,17 @@ if (isset($target4) && $target4 == TRUE ){
 $query_update = "UPDATE signals SET signal_reached = 4, signal_profit = '{$rounded_proc4}'  WHERE signal_id = '{$signal_id}' ";
 }
 
+if(isset($update_query)){
+
 $database->query($query_update);
 
-echo $message;
+}
 
+if(empty($message)){
+	echo "Terget jeszcze nie osiągnięty";
+}else{
+echo $message;
+}
 						?>
 							<!-- ad-item -->
 							<div class="ad-item row">

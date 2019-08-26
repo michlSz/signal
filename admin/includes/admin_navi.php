@@ -7,11 +7,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">SB Admin</a>
+                <a class="navbar-brand" href="index.php">Admin</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
-                <li><a href="../index.php">Home site</a></li>
+                <li><a href="../signals.php">Signals</a></li>
         
 
                 <li class="dropdown">

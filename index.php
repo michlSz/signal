@@ -112,7 +112,7 @@ session_start();
 			
 
 						<div class="ad-btn">
-							<a href="#" class="btn btn-primary">Dołącz</a>
+							<a href="register.php" class="btn btn-primary">Dołącz</a>
 						</div>
 					</div>
 					<div class="col-md-6 text-center">
