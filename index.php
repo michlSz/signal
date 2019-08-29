@@ -112,7 +112,27 @@
 						</div>
 					</div>
 					<div class="col-md-6 text-center">
-						<img src="images/mobile.png" alt="Image" class="img-fluid">
+						<img src="
+
+										<?php 
+										if(isset($target1) == TRUE){
+											echo "images/czop1.png";
+										}
+										if(isset($target2) == TRUE){
+											echo "images/czop2.png";
+										}
+										if(isset($target3) == TRUE){
+											echo "images/czop3.png";
+										}
+										if(isset($target4) == TRUE){
+											echo "images/czop4.png";
+										}else{
+											echo "images/czop0.png";
+										}
+
+										?>
+
+										" alt="Image" class="img-fluid">
 					</div>
 				</div><!-- row -->
 			</div><!-- contaioner -->
@@ -174,7 +194,26 @@
 						<!-- featured -->
 						<div class="featured">
 							<div class="featured-image">
-								<a href="details.php?id=<?php echo $signal_id; ?>"><img src="images/featured/1.jpg" alt="" class="img-fluid"></a>
+								<a href="details.php?id=<?php echo $signal_id; ?>"><img src="
+
+										<?php 
+										if(isset($target1) == TRUE){
+											echo "images/czop1.png";
+										}
+										if(isset($target2) == TRUE){
+											echo "images/czop2.png";
+										}
+										if(isset($target3) == TRUE){
+											echo "images/czop3.png";
+										}
+										if(isset($target4) == TRUE){
+											echo "images/czop4.png";
+										}else{
+											echo "images/czop0.png";
+										}
+
+										?>
+										" alt="" class="img-fluid"></a>
 								<a href="#" class="verified" data-toggle="tooltip" data-placement="top" title="Verified"><i class="fa fa-check-square-o"></i></a>
 							</div>
 							

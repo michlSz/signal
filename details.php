@@ -178,7 +178,27 @@ $procentage4 = $signal_target_4 / $signal_entry_from * 100 - 100 ;
 				<div class="row">
 					<!-- carousel -->
 					
-									<img src="images/slider/list-1.jpg" alt="Carousel Thumb" class="img-details">
+									<img src="
+
+										<?php 
+										if(isset($target1) == TRUE){
+											echo "images/czop1.png";
+										}
+										if(isset($target2) == TRUE){
+											echo "images/czop2.png";
+										}
+										if(isset($target3) == TRUE){
+											echo "images/czop3.png";
+										}
+										if(isset($target4) == TRUE){
+											echo "images/czop4.png";
+										}else{
+											echo "images/czop0.png";
+										}
+
+										?>
+
+										" alt="Carousel Thumb" class="img-details">
 								<!-- Controls -->	
 
 					<!-- slider-text -->
