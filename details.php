@@ -50,16 +50,6 @@
 	<!-- main -->
 	<section id="main" class="clearfix details-page">
 		<div class="container">
-			<div class="breadcrumb-section">
-				<!-- breadcrumb -->
-				<ol class="breadcrumb">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="#">Electronics & Gedget</a></li>
-					<li>Mobile Phone</li>
-				</ol><!-- breadcrumb -->						
-				<h2 class="title">Mobile Phones</h2>
-			</div>
-						
 			<div class="section banner">				
 				<!-- banner-form -->
 				<!-- banner-form -->
@@ -291,9 +281,7 @@ $query_update = "SELECT * FROM updates WHERE signal_id = '{$id}' ORDER BY update
 	<!-- download -->
 	
 	<!-- footer -->
-	<footer id="footer" class="clearfix">
-		<!-- footer-top -->
-		<section class="footer-top clearfix">
+	<section class="footer-top clearfix">
 			<div class="container">
 				<div class="row">
 					<!-- footer-widget -->
@@ -301,31 +289,16 @@ $query_update = "SELECT * FROM updates WHERE signal_id = '{$id}' ORDER BY update
 						<div class="footer-widget">
 							<h3>Quik Links</h3>
 							<ul>
-								<li><a href="#">About Us</a></li>
-								<li><a href="#">Contact Us</a></li>
-								<li><a href="#">Careers</a></li>
-								<li><a href="#">All Cities</a></li>
-								<li><a href="#">Help & Support</a></li>
-								<li><a href="#">Advertise With Us</a></li>
-								<li><a href="#">Blog</a></li>
+								<li><a href="index.php">Home</a></li>
+								<li><a href="signals.php">Trading</a></li>
+								<li><a href="register.php">Zarejestruj się</a></li>
+								<li><a href="signin.php">Zaloguj się</a></li>
 							</ul>
 						</div>
 					</div><!-- footer-widget -->
 
 					<!-- footer-widget -->
-					<div class="col-md-3 col-sm-6">
-						<div class="footer-widget">
-							<h3>How to sell fast</h3>
-							<ul>
-								<li><a href="#">How to sell fast</a></li>
-								<li><a href="#">Membership</a></li>
-								<li><a href="#">Banner Advertising</a></li>
-								<li><a href="#">Promote your ad</a></li>
-								<li><a href="#">Trade Delivers</a></li>
-								<li><a href="#">FAQ</a></li>
-							</ul>
-						</div>
-					</div><!-- footer-widget -->
+					<!-- footer-widget -->
 
 					<!-- footer-widget -->
 					<div class="col-md-3 col-sm-6">
@@ -344,7 +317,7 @@ $query_update = "SELECT * FROM updates WHERE signal_id = '{$id}' ORDER BY update
 					<div class="col-md-3 col-sm-6">
 						<div class="footer-widget news-letter">
 							<h3>Newsletter</h3>
-							<p>Trade is Worldest leading classifieds platform that brings!</p>
+							<p>Zapisz się do newslettera!</p>
 							<!-- form -->
 							<form action="#">
 								<input type="email" class="form-control" placeholder="Your email id">
@@ -354,15 +327,8 @@ $query_update = "SELECT * FROM updates WHERE signal_id = '{$id}' ORDER BY update
 					</div><!-- footer-widget -->
 				</div><!-- row -->
 			</div><!-- container -->
-		</section><!-- footer-top -->
-
-		
-		<div class="footer-bottom clearfix text-center">
-			<div class="container">
-				<p>Copyright &copy; 2018. Developed by <a href="http://themeregion.com/">ThemeRegion</a></p>
-			</div>
-		</div><!-- footer-bottom -->
-	</footer><!-- footer -->
+		</section>
+</footer><!-- footer -->
 
 	
      <!-- JS -->

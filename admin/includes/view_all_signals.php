@@ -26,6 +26,7 @@
 
 
                                 $select_signals = Signal::find_all_signals();
+                                $select_updates = Update::find_all_updates();
 
                                 while($row = mysqli_fetch_array($select_signals)){
                                     $signal_id = $row['signal_id'];
@@ -47,6 +48,7 @@
                                     $signal_target_5 = $row['signal_target_5'];
                                     $signal_stoploss = $row['signal_stoploss'];
 
+
                                     echo "<tr>";
                                     echo "<td>$signal_id</td>";
                                     echo "<td>$signal_author</td>";
@@ -67,8 +69,11 @@
                                     echo "<td>$signal_target_5</td>"; 
                                     echo "<td>$signal_stoploss</td>"; 
                                     echo "</tr>";
+                                    
+                                    
                                 }
 
+                                
                                 ?>
 
 

@@ -1,54 +1,49 @@
 <table class="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
                                     <th>Signal ID</th>
                                     <th>Signal Pair</th>
                                     <th>Signal Created</th>
                                     <th>Add Update</th>
+                                </tr>
                             </thead>
                             <tbody>
                                 <?php 
 
 /*
-if($_SESSION['user_role'] == "admin"){
+                                    if($_SESSION['user_role'] == "admin"){
 
-                                    $update_query = "SELECT * FROM updates";
+                                    $update_query = "SELECT * FROM signals";
 
                                 }elseif($_SESSION['user_role'] == "analyst"){
 
                                    $user_session_email = $_SESSION['user_email'];
 
-                                    $update_query = "SELECT * FROM updates WHERE signal_author = '{$user_session_email}' ";
+                                    $update_query = "SELECT * FROM signals WHERE signal_author = '{$user_session_email}' ";
+                                    $update_query_2 = 
                                 }
 
                                 $select_updates = $database->query($update_query);
 
 */
 
-                                $select_updates = Update::find_all_updates();
+                                $select_signals = Signal::find_all_signals();
 
-                                while($row = mysqli_fetch_array($select_updates)){
-                                    $update_id = $row['update_id'];
+                                while($row = mysqli_fetch_array($select_signals)){
                                     $signal_id = $row['signal_id'];
-                                    $signal_pair = $row['signal_pair'];
-                                    $update_content = $row['update_content'];
-                                    $update_date = $row['update_date'];
-                                
+                                    $signal_pair_1 = $row['signal_pair_1'];
+                                    $signal_pair_2 = $row['signal_pair_2'];
+                                    $signal_created = $row['signal_created'];
+
+
+                                $signal_pair = $signal_pair_1 . $signal_pair_2;
 
                                     echo "<tr>";
-                                    echo "<td>$update_id</td>";
                                     echo "<td>$signal_id</td>";
-                                    echo "<td>$signal_pair</td>";
-                                    echo "<td>$update_date</td>";
-/*
-                            $select_id = $con->query("SELECT * FROM categories WHERE cat_id = '$post_cat_id' ");
-
-                            while( $row = mysqli_fetch_array($select_id)){
-                            $cat_table_id = $row['cat_id'];
-                            $cat_table_title = $row['cat_title'];
-}
-*/                                  echo "<td><a href='updates.php?source=add_update&id=$signal_id&pair=$signal_pair'>Add Update</a></td>";
+                                    echo "<td>$signal_pair_1 $signal_pair_2</td>";
+                                    echo "<td>$signal_created</td>";
+                                    echo "<td><a href='updates.php?source=add_update&id=$signal_id&pair=$signal_pair'>Add Update</a></td>";
+                                    echo "</tr>";
 
 
                                     

@@ -21,9 +21,8 @@ $query = "INSERT INTO updates (signal_id, signal_pair, update_content, update_da
 
 
 
-$queryAddPost = mysqli_query($con, $query);
+	$add_update = Update::add_update($signal_id, $signal_pair,  $update_content);
 
-confirm($queryAddPost);
 
 
 

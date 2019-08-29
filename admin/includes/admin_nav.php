@@ -21,6 +21,7 @@
                 }
 
 
+/*
                if($_SERVER['REQUEST_URI'] == '/signal2/public/admin/users.php' && $_SESSION['user_role'] == 'user' || $_SESSION['user_role'] == 'analyst'){
 
             	  header("Location: /signal2/public/admin/");
@@ -28,6 +29,17 @@
              
                 }
 
+*/
+
+
+                if($_SERVER['REQUEST_URI'] == '/signal2/public/admin/users.php' && $_SESSION['user_role'] == 'user'){
+
+                header("Location: /signal2/public/admin/");
+
+                }
+
+
+            
 
 			if($_SERVER['REQUEST_URI'] == '/signal2/public/admin/signals.php' && $_SESSION['user_role'] == 'user'){
 
@@ -40,4 +52,21 @@
 				 header("Location: /signal2/public/admin/");
 
 			}
+
+
+
+                if($_SERVER['REQUEST_URI'] == '/signal2/public/admin/users.php' && $_SESSION['user_role'] == 'analyst'){
+
+                header("Location: /signal2/public/admin/");
+
+                }
+
+
+        
+           
+
+
+
+
+
 ?>

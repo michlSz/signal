@@ -36,7 +36,7 @@ $query = "INSERT INTO signals(signal_author, signal_pair_1, signal_pair_2, signa
 
 //confirm($queryAddPost);
 
-}
+
 
 ?>
 

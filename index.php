@@ -1,8 +1,4 @@
-<?php
-session_start();
-
-?>
-
+<?php session_start(); ?>
 
 
 <!DOCTYPE html>
@@ -353,13 +349,6 @@ session_start();
 				</div><!-- row -->
 			</div><!-- container -->
 		</section><!-- footer-top -->
-
-		
-		<div class="footer-bottom clearfix text-center">
-			<div class="container">
-				<p>Copyright &copy; 2018. Developed by <a href="http://themeregion.com/">ThemeRegion</a></p>
-			</div>
-		</div><!-- footer-bottom -->
 	</footer><!-- footer -->
 
 	

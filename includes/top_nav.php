@@ -2,7 +2,7 @@
 
 include ("db.php");
 include ("../admin/includes/functions.php");
-
+ob_start();
 ?>
 <nav class="navbar navbar-default navbar-expand-lg">
 			<div class="container">
@@ -17,6 +17,18 @@ include ("../admin/includes/functions.php");
 						<li><a href="signals.php">Trading</a></li>
 						<li><a href="register.php">Zarejestruj się</a></li>
 						<li><a href="signin.php">Zaloguj się</a></li> 
+						<?php 
+
+						if(isset($_GET['rola'])){
+
+							$_SESSION['panel_admina'] = $_GET['rola'];
+
+						}
+						if(isset($_SESSION['panel_admina'])){
+
+							echo "<li><a href='admin'>Admin</a></li>";
+						}
+						?>
 					</ul>
 				</div>
 

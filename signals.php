@@ -23,7 +23,7 @@ header("Location: index.php");
     <meta name="author" content="Theme Region">
    	<meta name="description" content="">
 
-    <title>Trade | World's Largest Classifieds Portal</title>
+    <title>Signals</title>
 
    <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" >
@@ -66,14 +66,7 @@ header("Location: index.php");
 	<!-- main -->
 	<section id="main" class="clearfix category-page main-categories">
 		<div class="container">
-			<div class="breadcrumb-section">
-				<!-- breadcrumb -->
-				<ol class="breadcrumb">
-					<li><a href="index.html">Home</a></li>
-					<li>Electronics & Gedget</li>
-				</ol><!-- breadcrumb -->						
-				<h2 class="title">Mobile Phones</h2>
-			</div>
+			
 
 			<?php
 			/*
@@ -148,7 +141,7 @@ echo'<br />';
 						<div class="section recommended-ads">
 							<!-- featured-top -->
 							<div class="featured-top">
-								<h4>Recommended Ads for You</h4>
+								<h4>Dostępne sygnały</h4>
 								<div class="dropdown pull-right">
 								
 								<!-- category-change -->
@@ -205,35 +198,32 @@ echo'<br />';
 										
 
 										$query_list = "SELECT * FROM signals WHERE signal_timeframe = '{$duration}' ";
-									}elseif (isset($_GET['szukaj'])){
+										}elseif (isset($_GET['szukaj'])){
 
 										$_GET['szukaj']=trim($_GET['szukaj']);
 
 										$query_list = "SELECT * FROM signals WHERE signal_pair_1 LIKE '%{$_GET['szukaj']}%'";
 
-}
-elseif (isset($_GET['najnowsze'])){
+										}elseif (isset($_GET['najnowsze'])){
 
 
 										$query_list = "SELECT * FROM signals ORDER BY signal_created DESC";
 
-}
-elseif (isset($_GET['najstarsze'])){
+										}elseif (isset($_GET['najstarsze'])){
 
 
 										$query_list = "SELECT * FROM signals ORDER BY signal_created ASC";
 
-}
-elseif (isset($_GET['wszystkie'])){
+										}elseif (isset($_GET['wszystkie'])){
 
 
 										$query_list = "SELECT * FROM signals";
 
-}
+										}
 										else{
 
 										$query_list = "SELECT * FROM signals";
-									}
+										}
 
 
 
@@ -270,126 +260,147 @@ elseif (isset($_GET['wszystkie'])){
 
 										if($trimmed > $signal_target_1 && $trimmed < $signal_target_2 ){
 
-if(empty($_SESSION['t1_' . '$signal_id'] )){
+										if(empty($_SESSION['t1_' . '$signal_id'] )){
 
-	$_SESSION['t1_' . '$signal_id'] = 1;
-}
+									$_SESSION['t1_' . '$signal_id'] = 1;
+								}
 
-}
+								}
 
-if(isset($_SESSION['t1_' . '$signal_id'])){
+								if(isset($_SESSION['t1_' . '$signal_id'])){
 
-	$message =  "I target osiągniety";
-	$target1 = TRUE;
+									$message =  "I target osiągniety";
+									$target1 = TRUE;
 
-}
-echo "<br>";
-
-
-
-
-
-if($trimmed >= $signal_target_2 && $trimmed < $signal_target_3 ){
-
-if(empty($_SESSION['t2_' . '$signal_id'] )){
-
-	$_SESSION['t2_' . '$signal_id'] = 1;
-}
-
-}
-
-if(isset($_SESSION['t2_' . '$signal_id'])){
-
-	$message =  "II target osiągniety";
-	$target2 = TRUE;
-}
-echo "<br>";
+								}
+								echo "<br>";
 
 
 
 
-if($trimmed >= $signal_target_3 && $trimmed < $signal_target_4 ){
 
-if(empty($_SESSION['t3_' . '$signal_id'] )){
+								if($trimmed >= $signal_target_2 && $trimmed < $signal_target_3 ){
 
-	$_SESSION['t3_' . '$signal_id'] = 1;
-}
+								if(empty($_SESSION['t2_' . '$signal_id'] )){
 
-}
+									$_SESSION['t2_' . '$signal_id'] = 1;
+								}
 
-if(isset($_SESSION['t3_' . '$signal_id'])){
+								}
 
-	$message =  "III target osiągniety";
-	$target3 = TRUE;
-}
+								if(isset($_SESSION['t2_' . '$signal_id'])){
 
-if($trimmed >= $signal_target_4){
-
-if(empty($_SESSION['t4_' . '$signal_id'] )){
-
-	$_SESSION['t4_' . '$signal_id'] = 1;
-}
-
-}
-
-if(isset($_SESSION['t4_' . '$signal_id'])){
-
-	$message =  "IV target osiągniety";
-	$target4 = TRUE;
-}
+									$message =  "II target osiągniety";
+									$target2 = TRUE;
+								}
+								echo "<br>";
 
 
-$procentage1 = ($signal_target_1 / $signal_entry_from) * 100 - 100 ;
-$procentage2 = ($signal_target_2 / $signal_entry_from) * 100 - 100 ;
-$procentage3 = ($signal_target_3 / $signal_entry_from) * 100 - 100 ;
-$procentage4 = ($signal_target_4 / $signal_entry_from) * 100 - 100 ;
 
 
-if (isset($target1) && $target1 == TRUE ){
+								if($trimmed >= $signal_target_3 && $trimmed < $signal_target_4 ){
 
-	$rounded_proc1 = round($procentage1);
-	$query_update = "UPDATE signals SET signal_reached = 1, signal_profit = '{$rounded_proc}'  WHERE signal_id = '{$signal_id}' ";
-}
+								if(empty($_SESSION['t3_' . '$signal_id'] )){
 
-if (isset($target2) && $target2 == TRUE ){
+									$_SESSION['t3_' . '$signal_id'] = 1;
+								}
 
-	$rounded_proc2 = round($procentage2);
+								}
 
-$query_update = "UPDATE signals SET signal_reached = 2, signal_profit = '{$rounded_proc2}'  WHERE signal_id = '{$signal_id}' ";
-}
+								if(isset($_SESSION['t3_' . '$signal_id'])){
 
-if (isset($target3) && $target3 == TRUE){
+									$message =  "III target osiągniety";
+									$target3 = TRUE;
+								}
 
-	$rounded_proc3 = round($procentage3);
+								if($trimmed >= $signal_target_4){
 
-$query_update = "UPDATE signals SET signal_reached = 3, signal_profit = '{$rounded_proc3}'  WHERE signal_id = '{$signal_id}' ";
-}
+								if(empty($_SESSION['t4_' . '$signal_id'] )){
 
-if (isset($target4) && $target4 == TRUE ){
+									$_SESSION['t4_' . '$signal_id'] = 1;
+								}
 
-	$rounded_proc4 = round($procentage4);
+								}
 
-$query_update = "UPDATE signals SET signal_reached = 4, signal_profit = '{$rounded_proc4}'  WHERE signal_id = '{$signal_id}' ";
-}
+								if(isset($_SESSION['t4_' . '$signal_id'])){
 
-if(isset($update_query)){
+									$message =  "IV target osiągniety";
+									$target4 = TRUE;
+								}
 
-$database->query($query_update);
 
-}
+								$procentage1 = ($signal_target_1 / $signal_entry_from) * 100 - 100 ;
+								$procentage2 = ($signal_target_2 / $signal_entry_from) * 100 - 100 ;
+								$procentage3 = ($signal_target_3 / $signal_entry_from) * 100 - 100 ;
+								$procentage4 = ($signal_target_4 / $signal_entry_from) * 100 - 100 ;
 
-if(empty($message)){
-	echo "Terget jeszcze nie osiągnięty";
-}else{
-echo $message;
-}
-						?>
+
+								if (isset($target1) && $target1 == TRUE ){
+
+									$rounded_proc1 = round($procentage1);
+									$query_update = "UPDATE signals SET signal_reached = 1, signal_profit = '{$rounded_proc1}'  WHERE signal_id = '{$signal_id}' ";
+								}
+
+								if (isset($target2) && $target2 == TRUE ){
+
+									$rounded_proc2 = round($procentage2);
+
+								$query_update = "UPDATE signals SET signal_reached = 2, signal_profit = '{$rounded_proc2}'  WHERE signal_id = '{$signal_id}' ";
+								}
+
+								if (isset($target3) && $target3 == TRUE){
+
+									$rounded_proc3 = round($procentage3);
+
+								$query_update = "UPDATE signals SET signal_reached = 3, signal_profit = '{$rounded_proc3}'  WHERE signal_id = '{$signal_id}' ";
+								}
+
+								if (isset($target4) && $target4 == TRUE ){
+
+									$rounded_proc4 = round($procentage4);
+
+								$query_update = "UPDATE signals SET signal_reached = 4, signal_profit = '{$rounded_proc4}'  WHERE signal_id = '{$signal_id}' ";
+								}
+
+								if(isset($update_query)){
+
+								$database->query($query_update);
+
+								}
+
+								if(empty($message)){
+									echo "Terget jeszcze nie osiągnięty";
+								}else{
+								echo $message;
+								}
+								?>
 							<!-- ad-item -->
 							<div class="ad-item row">
 								<!-- item-image -->
 								<div class="item-image-box col-lg-4">
 									<div class="item-image">
-										<a href="details.php?id=<?php echo $signal_id; ?>"><img src="images/listing/1.jpg" alt="Image" class="img-fluid"></a>
+										<a href="details.php?id=<?php echo $signal_id; ?>">
+										<img src="
+
+										<?php 
+										if(isset($target1) == TRUE){
+											echo "images/czop1.png";
+										}
+										if(isset($target2) == TRUE){
+											echo "images/czop2.png";
+										}
+										if(isset($target3) == TRUE){
+											echo "images/czop3.png";
+										}
+										if(isset($target4) == TRUE){
+											echo "images/czop4.png";
+										}else{
+											echo "images/czop0.png";
+										}
+
+										?>
+
+										" alt="Image" class="img-fluid"></a>
 									</div><!-- item-image -->
 								</div>
 								
@@ -500,44 +511,27 @@ echo $message;
 	
 	
 	<!-- footer -->
-	<footer id="footer" class="clearfix">
-		<!-- footer-top -->
-		<section class="footer-top clearfix">
+	<section class="footer-top clearfix">
 			<div class="container">
 				<div class="row">
 					<!-- footer-widget -->
-					<div class="col-sm-6 col-md-3">
+					<div class="col-md-3 col-sm-6">
 						<div class="footer-widget">
 							<h3>Quik Links</h3>
 							<ul>
-								<li><a href="#">About Us</a></li>
-								<li><a href="#">Contact Us</a></li>
-								<li><a href="#">Careers</a></li>
-								<li><a href="#">All Cities</a></li>
-								<li><a href="#">Help & Support</a></li>
-								<li><a href="#">Advertise With Us</a></li>
-								<li><a href="#">Blog</a></li>
+								<li><a href="index.php">Home</a></li>
+								<li><a href="signals.php">Trading</a></li>
+								<li><a href="register.php">Zarejestruj się</a></li>
+								<li><a href="signin.php">Zaloguj się</a></li>
 							</ul>
 						</div>
 					</div><!-- footer-widget -->
 
 					<!-- footer-widget -->
-					<div class="col-sm-6 col-md-3">
-						<div class="footer-widget">
-							<h3>How to sell fast</h3>
-							<ul>
-								<li><a href="#">How to sell fast</a></li>
-								<li><a href="#">Membership</a></li>
-								<li><a href="#">Banner Advertising</a></li>
-								<li><a href="#">Promote your ad</a></li>
-								<li><a href="#">Trade Delivers</a></li>
-								<li><a href="#">FAQ</a></li>
-							</ul>
-						</div>
-					</div><!-- footer-widget -->
+					<!-- footer-widget -->
 
 					<!-- footer-widget -->
-					<div class="col-sm-6 col-md-3">
+					<div class="col-md-3 col-sm-6">
 						<div class="footer-widget social-widget">
 							<h3>Follow us on</h3>
 							<ul>
@@ -550,10 +544,10 @@ echo $message;
 					</div><!-- footer-widget -->
 
 					<!-- footer-widget -->
-					<div class="col-sm-6 col-md-3">
+					<div class="col-md-3 col-sm-6">
 						<div class="footer-widget news-letter">
 							<h3>Newsletter</h3>
-							<p>Trade is Worldest leading classifieds platform that brings!</p>
+							<p>Zapisz się do newslettera!</p>
 							<!-- form -->
 							<form action="#">
 								<input type="email" class="form-control" placeholder="Your email id">
@@ -564,13 +558,6 @@ echo $message;
 				</div><!-- row -->
 			</div><!-- container -->
 		</section><!-- footer-top -->
-
-		
-		<div class="footer-bottom clearfix text-center">
-			<div class="container">
-				<p>Copyright &copy; 2018. Developed by <a href="http://themeregion.com/">ThemeRegion</a></p>
-			</div>
-		</div><!-- footer-bottom -->
 	</footer><!-- footer -->
 	
      <!-- JS -->

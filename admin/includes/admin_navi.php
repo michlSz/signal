@@ -11,7 +11,7 @@
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
-                <li><a href="../signals.php">Signals</a></li>
+                <li><a href="../signals.php">Check signals</a></li>
         
 
                 <li class="dropdown">

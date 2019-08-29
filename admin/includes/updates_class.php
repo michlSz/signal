@@ -21,4 +21,18 @@ public static function find_all_updates(){
 
 }
 }
+
+public static function add_update($signal_id, $signal_pair,  $update_content){
+
+	global $database;
+	
+	$result_add = $database->query("INSERT INTO updates (signal_id, signal_pair, update_content, update_date) 
+	
+	VALUES ('$signal_id', '$signal_pair', '$update_content', now() ) " ) ;
+
+	return $result_add;
+
+}
+
+
 }

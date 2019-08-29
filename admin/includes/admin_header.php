@@ -8,22 +8,7 @@ include "includes/users_class.php";
 include "includes/signals_class.php";
 include "includes/updates_class.php";
 
-
-
-
-/* Sprawdza, jak nie admin t wurzca na index
-if(isset($_SESSION['user_role'])){
-
-    if($_SESSION['user_role'] !== 'admin'){
-        header("Location: ../index.php");
-    }
-}
-*/
-
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
