@@ -2,6 +2,13 @@
 
 PHP based project to share cryptocurrency signals. 
 
+
+Basic features:
+- create account
+- login/logout
+- add signals
+- add signal comments/updates
+
 The typical signal contains:
 - crypto current price
 - signal pair
