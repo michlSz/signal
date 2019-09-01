@@ -40,9 +40,9 @@ Admin:
 
 Analyst:
 - add signals
-- view his one signals in the admin panel
+- view analyst signals in the admin panel
 - view all signals on the front-end
-- add a comment to his one signal
+- add a comment to analyst signal
 
 User:
 - see all signals on the front-end
