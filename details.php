@@ -181,16 +181,16 @@ $procentage4 = $signal_target_4 / $signal_entry_from * 100 - 100 ;
 									<img src="
 
 										<?php 
-										if(isset($target1) == TRUE){
+										if(isset($target1)){
 											echo "images/czop1.png";
 										}
-										if(isset($target2) == TRUE){
+										if(isset($target2)){
 											echo "images/czop2.png";
 										}
-										if(isset($target3) == TRUE){
+										if(isset($target3)){
 											echo "images/czop3.png";
 										}
-										if(isset($target4) == TRUE){
+										if(isset($target4)){
 											echo "images/czop4.png";
 										}else{
 											echo "images/czop0.png";
@@ -209,17 +209,15 @@ $procentage4 = $signal_target_4 / $signal_entry_from * 100 - 100 ;
 							<span><strong>Wejście:</strong></span><span class="float-right text-success"><?php echo $signal_entry_from; ?> - <?php echo $signal_entry_to; ?></span><hr><span><strong>Targety:</strong></span>
 
 							<span class="float-right <?php
-echo ($target2 == TRUE) ? "text-success" : "" ; ?>"> 2. <?php echo $signal_target_2; ?> (<?php echo round($procentage2) ?>%)   </span>
+							echo ($target2 == TRUE) ? "text-success" : "" ; ?>"> 2. <?php echo $signal_target_2; ?> (<?php echo round($procentage2) ?>%)   </span>
 
 							<span class="float-right <?php
-echo ($target1 == TRUE) ? "text-success" : "" ; ?>">1. <?php echo $signal_target_1; ?> (<?php echo round($procentage1) ?>%) </span><br>
+							echo ($target1 == TRUE) ? "text-success" : "" ; ?>">1. <?php echo $signal_target_1; ?> (<?php echo round($procentage1) ?>%) </span><br>
 
 
+							<span class="float-right <?php echo ($target4 == TRUE) ? "text-success" : "" ; ?>"> 4. <?php echo $signal_target_4; ?>(<?php echo round($procentage4) ?>%) </span>
 
-										<span class="float-right <?php
-echo ($target4 == TRUE) ? "text-success" : "" ; ?>"> 4. <?php echo $signal_target_4; ?>(<?php echo round($procentage4) ?>%) </span>
-										<span class="float-right <?php
-echo ($target3 == TRUE) ? "text-success" : "" ; ?>">3. <?php echo $signal_target_3 ?>(<?php echo round($procentage3) ?>%) </span><hr>
+							<span class="float-right <?php echo ($target3 == TRUE) ? "text-success" : "" ; ?>">3. <?php echo $signal_target_3 ?>(<?php echo round($procentage3) ?>%) </span><hr>
 
 							<span><strong>Stop Loss:</strong></span><span class="float-right text-danger"><?php echo $signal_stoploss; ?> BTC</span>
 

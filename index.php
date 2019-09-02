@@ -194,19 +194,19 @@
 						<!-- featured -->
 						<div class="featured">
 							<div class="featured-image">
-								<a href="details.php?id=<?php echo $signal_id; ?>"><img src="
+								<a href="#"><img src="
 
 										<?php 
-										if(isset($target1) == TRUE){
+										if(isset($target1)){
 											echo "images/czop1.png";
 										}
-										if(isset($target2) == TRUE){
+										if(isset($target2)){
 											echo "images/czop2.png";
 										}
-										if(isset($target3) == TRUE){
+										if(isset($target3)){
 											echo "images/czop3.png";
 										}
-										if(isset($target4) == TRUE){
+										if(isset($target4)){
 											echo "images/czop4.png";
 										}else{
 											echo "images/czop0.png";

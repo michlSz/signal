@@ -68,54 +68,7 @@ header("Location: index.php");
 		<div class="container">
 			
 
-			<?php
-			/*
-// program wyszukiwarki - search.php
-// wyświetlenie nagłówka
-echo'<h2>Wyniki wyszukiwania</h2>';
-// usunięcie niepotrzebnych białych znaków
-if(isset($_GET['szukaj'])){
-	$_GET['szukaj']=trim($_GET['szukaj']);}
-// sprawdzenie, czy użytkownik wpisał dane
-if(!isset($_GET['szukaj'])){
-// jeśli nie, to wyświetl komunikat i zakończ działanie skryptu
-//die('Formularz wypełniony niepoprawnie! Nie można wyświetlić wyników wyszukiwania!');
-// jeśli jednak dane są wpisane poprawnie
-}else
-{
-// połączenie z bazą danych, NIE ZAPOMINJ USTAWIĆ WŁASNYCH DANYCH!
-//$base=mysqli_connect('host','uzytkownik','haslo','nazwa_bazy');
-// skonstruowanie zapytania
-// zwróć uwagę na operator Like - to on jest sercem całej aplikacji. Pozwala wyszukać dany ciąg w bazie danych
-// jak zapewne zauważyłeś, przed frazą i po niej umieszczam znaki procenta %
-// ten znak symbolizuje dowolny inny ciąg znaków, więc jest niezbędny do skutecznego wyszukiwania
-// połaczenie operatorem Or pozwala na wyszukiwanie danego ciągu zarówno w nazwie, jak i opisie produktu
-// UWAGA! Tutaj też nie zapomnij ustawić swoich danych!
-$query_search="SELECT * FROM signals WHERE signal_pair LIKE '%{$_GET['szukaj']}%'";
-// wysłanie zapytania do bazy danych
-$result=mysqli_query($con,$query_search);
-// ustalenie ilości wyszukanych obiektów
-$obAmount=mysqli_num_rows($result);
-// wyswietlenie ilości wyszukanych obiektów
-echo'Znaleziono: '.$obAmount.'<br /><br />';
-// wyświetlenie wyników w pętli
-for($x=0;$x<$obAmount;$x++)
-{
-// przekształcenie danych na tablicę
-$row=mysqli_fetch_array($result);
-// wyświetlenie numeru identyfikacyjnego
-echo $x+1;
-echo '. ';
-// wyświetlenie nazwy produktu
-echo $row['signal_pair'];
-echo'<br />';
-}
-}
-// zamknięcie połączenia
-
-// koniec aplikacji
-*/
-?>	
+			
 			<div class="banner">
 			
 				<!-- banner-form -->
@@ -160,35 +113,6 @@ echo'<br />';
 
 <?php
 
-// program wyszukiwarki - search.php
-// wyświetlenie nagłówka
-//echo'<h2>Wyniki wyszukiwania</h2>';
-// usunięcie niepotrzebnych białych znaków
-//if(isset($_GET['szukaj'])){
-	//$_GET['szukaj']=trim($_GET['szukaj']);}
-// sprawdzenie, czy użytkownik wpisał dane
-//if(!isset($_GET['szukaj'])){
-// jeśli nie, to wyświetl komunikat i zakończ działanie skryptu
-//die('Formularz wypełniony niepoprawnie! Nie można wyświetlić wyników wyszukiwania!');
-// jeśli jednak dane są wpisane poprawnie
-//}else
-//{
-// połączenie z bazą danych, NIE ZAPOMINJ USTAWIĆ WŁASNYCH DANYCH!
-//$base=mysqli_connect('host','uzytkownik','haslo','nazwa_bazy');
-// skonstruowanie zapytania
-// zwróć uwagę na operator Like - to on jest sercem całej aplikacji. Pozwala wyszukać dany ciąg w bazie danych
-// jak zapewne zauważyłeś, przed frazą i po niej umieszczam znaki procenta %
-// ten znak symbolizuje dowolny inny ciąg znaków, więc jest niezbędny do skutecznego wyszukiwania
-// połaczenie operatorem Or pozwala na wyszukiwanie danego ciągu zarówno w nazwie, jak i opisie produktu
-// UWAGA! Tutaj też nie zapomnij ustawić swoich danych!
-//$query_search="SELECT * FROM signals WHERE signal_pair LIKE '%{$_GET['szukaj']}%'";
-// wysłanie zapytania do bazy danych
-//$result=mysqli_query($con,$query_search);
-// ustalenie ilości wyszukanych obiektów
-//$obAmount=mysqli_num_rows($result);
-// wyswietlenie ilości wyszukanych obiektów
-//echo'Znaleziono: '.$obAmount.'<br /><br />';
-// wyświetlenie wyników w pętli
 
 
 									if(isset($_GET['duration'])){
@@ -383,16 +307,16 @@ echo'<br />';
 										<img src="
 
 										<?php 
-										if(isset($target1) == TRUE){
+										if(isset($target1)){
 											echo "images/czop1.png";
 										}
-										if(isset($target2) == TRUE){
+										if(isset($target2)){
 											echo "images/czop2.png";
 										}
-										if(isset($target3) == TRUE){
+										if(isset($target3)){
 											echo "images/czop3.png";
 										}
-										if(isset($target4) == TRUE){
+										if(isset($target4)){
 											echo "images/czop4.png";
 										}else{
 											echo "images/czop0.png";

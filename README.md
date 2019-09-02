@@ -3,6 +3,17 @@
 PHP based project to share cryptocurrency signals. 
 
 
+You can see the project on http://enemer.kylos.pl/signal2/
+
+!! =========== IMPORTANT ========== !!
+
+Signals might not occur:
+- if you have adBlock turn on
+- when API request will run out (only 100 per day in free plan on coinapi.io)
+
+!! ================================ !!
+
+
 Basic features:
 - create account
 - login/logout
