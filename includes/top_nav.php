@@ -1,7 +1,7 @@
 <?php
 
 include ("db.php");
-include ("../admin/includes/functions.php");
+include ("admin/includes/functions.php");
 ob_start();
 ?>
 <nav class="navbar navbar-default navbar-expand-lg">

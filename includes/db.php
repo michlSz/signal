@@ -7,7 +7,6 @@ define("DB_NAME", "signal2");
 
 
 
-
 class Database {
 
 
